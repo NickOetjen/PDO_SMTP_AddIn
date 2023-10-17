@@ -14,22 +14,22 @@ On Error Resume Next
 
 
     ' PDO: Prepare Mail
-    objMail.smtpServer "smtp.strato.de"
+    objMail.smtpServer "smtp.yourserver.de"
     objMail.IsSSL True
     objMail.Password InputBox("Password")
     
-    objMail.EmailFrom "oetjen@pdoetjen.de"
+    objMail.EmailFrom "john@doe.de"
     
-    objMail.To_Add "oetjen@pdoetjen.de"
-    'objMail.To_Add "nick@pdoetjen.de"
+    objMail.To_Add "jane@doe.de"
+    'objMail.To_Add "nick@doe.de"
     
-    objMail.CC_Add "nick@pdoetjen.de"
-    objMail.BCC_Add "nick.oetjen@mlpdialog.de"
+    objMail.CC_Add "nick@doe.de"
+    objMail.BCC_Add "nick2@doe.de"
     
     objMail.Subject "This is my new subject"
     objMail.HTMLBody "The <strong>body</strong> of it, at " & Now()
     
-    objMail.Attachment_Add "C:\Users\oetje\Desktop\_____Sammy_Killer.gif"
+    objMail.Attachment_Add "C:\Users\yours\Desktop\Sammy.gif"
     
     
     ' PDO: Send Mail
